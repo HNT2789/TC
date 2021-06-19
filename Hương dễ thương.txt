@@ -1,5 +1,7 @@
 tshark -r '/root/Desktop/wlan.pcap' '(wlan.fc.type_subtype==0x20)&&(wlan.fc.protected==1)'| wc –l
 
+tshark -r '/root/Desktop/wlan.pcap' -Y '(wlan.fc.type_subtype==0x20)&&(wlan.fc.protected==1)' -T fields -e wlan.sa|sort|uniq -c|sort -nr
+
 tshark -r '/root/Desktop/wlan.pcap' -Y '(wlan.fc.type_subtype==0x20)&&(wlan.fc.protected==1)' -T fields -e wlan.da|sort|uniq -c|sort -nr
 
 tshark -r '/root/Desktop/wlan.pcap' -Y '(wlan.fc.type_subtype==0x20)&&(wlan.fc.protected==1)' -T fields -e wlan.sa -e wlan.da|sort|uniq -c|sort -nr
