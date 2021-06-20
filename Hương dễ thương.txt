@@ -10,4 +10,4 @@ tshark -r '/root/Desktop/wlan.pcap' -Y '(wlan.sa==1c:4b:d6:69:cd:07)' -T fields 
 
 aircrack-ng -b 00:23:69:61:00:d0 '/root/Desktop/wlan.pcap
 
-Tôi chịu chị luôn đấy chị NGÔ NGUYỄN QUỲNH HƯƠNG
+Tôi chịu chị luôn đấy chị NGÔ NGUYỄN QUỲNH HƯƠNG...
