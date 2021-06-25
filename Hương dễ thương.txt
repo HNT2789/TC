@@ -1,0 +1,28 @@
+tshark -r '/root/Desktop/wlan.pcap' 
+'(wlan.fc.type_subtype==0x20)&&(wlan.fc.protected==1)'| wc –l
+
+tshark -r '/root/Desktop/wlan.pcap' -Y 
+'(wlan.fc.type_subtype==0x20)&&(wlan.fc.protected==1)' -T fields -e 
+wlan.da|sort|uniq -c|sort -nr
+
+tshark -r '/root/Desktop/wlan.pcap' -Y 
+'(wlan.fc.type_subtype==0x20)&&(wlan.fc.protected==1)' -T fields -e wlan.sa -e 
+wlan.da|sort|uniq -c|sort -nr
+
+tshark -r '/root/Desktop/wlan.pcap' -Y '(wlan.sa==1c:4b:d6:69:cd:07)' -T 
+fields -e wlan.fc.type -e wlan.fc.subtype | sort -n| uniq -c| sort –
+nr
+
+aircrack-ng -b 00:23:69:61:00:d0 '/root/Desktop/wlan.pcap
+
+= BẢO BÌNH (Nhân đạo, tầm nhìn xa, lập dị) =
+"Giống với người khác thật nhàm chán"
+"Tôi đã tưởng tượng ra trăm nghìn cách để có thể thay đổi bạn, giúp bạn trở nên tốt hơn, nhưng .. lười làm quá!" :v Có vẻ đúng =]]]]]]]]]]
+"Định kiến chỉ dành cho những kẻ ngốc"
+"Tương lai PHẢI đẹp"
+"Làm thiên thần trong thế giới đầy ác quỷ này thật khó, nhưng vẫn hành xử như một kẻ tử tế"
+"Ý định tốt cần thiết hơn hành động tốt"
+"Muốn trở thành một kẻ tân tiến, hãy quên những lối nghĩ xưa cũ đi"
+"Tình dục? Thôi, tạm thời cho qua. Còn nhiều thứ quan trọng hơn để làm" =]]
+"Bạn đi trước, gia đình tiếp bước theo sau"
+"Thế giới này không ai thông minh và tài giỏi, tốt đẹp hơn tôi"
